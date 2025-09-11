@@ -7,10 +7,56 @@
 </head>
 <body>
     <h1>Register here</h1>
-    <form method="get" action="">
+    <!-- <form method="get" action="">
         Name:<input type="text" placeholder="Enter user name" required/><br/>
         MobileNumber:<input type="number" placeholder="Enter mobile number" required/><br/>
         Email:<input type="email" placeholder="Enter mobile number" required/><br/>
+    </form> -->
+    <form name="register" method="post" action="/register">
+        <label for="name">Name</label>
+        <input type="text" name="uname" placeholder="Enter usr name ">
+        <br>
+        <label for="email">Email</label>
+        <input type="email" name="email" placeholder="Enter the user email">
+        <br>
+        <label for="moblie">Mo No</label>
+        <input type="number" name="mobile" placeholder="Enter the user mobile number">
+        <br>
+        <label for="dob">DOB</label>
+        <input type="date" name="dob" placeholder="Enter the user DOB">
+        <br>
+        <label for="gender">Gender</label>
+        <input type="radio" name="gender" value="M" checked>Male
+        <input type="radio" name="gender" value="F">Female
+        <br>
+        <label for="branch">Branch</label>
+        <select name="branch">Branch
+        <option value="1">CSE</option>
+        <option value="2">IT</option>
+        <option value="3">CSE-DS</option>
+        <option value="4">CSE-AIML</option>
+        <option value="5">ME</option>
+        </select>
+        <br>
+        <label for="sem">Semester</label>
+        <select name="sem">Semester
+        <option value="1">I</option>
+        <option value="2">III</option>
+        <option value="3">V></option>
+        <option value="4">VII</option>
+        <option value="5">VIII</option></option>
+        </select>
+        <br>
+        <label for="add">Address</label>
+         <textarea name="address" rows="4" cols="40" placeholder="Enter your address here" required></textarea>
+        <br><br>
+
+        <button type="submit">Register</button>
+
+        
+
+
+
     </form>
 </body>
 </html>
