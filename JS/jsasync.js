@@ -34,43 +34,88 @@
 // login();
 // getData();
 // dispalyData();
-function register()
-{
-    setTimeout(()=>{
-    console.log("register end")},2000);
-}
-function sendEmail()
-{
-    setTimeout(()=>{
-    console.log("email end")},2000);
-}
+// function register()
+// {
+//     setTimeout(()=>{
+//     console.log("register end")},2000);
+// }
+// function sendEmail()
+// {
+//     setTimeout(()=>{
+//     console.log("email end")},2000);
+// }
 
-function login()
+// function login()
+// {
+//     setTimeout(()=>{
+//     console.log("login done")},2000);
+// }
+
+// function getData()
+// {
+//     setTimeout(()=>{
+//     console.log("data given")},2000);
+// }
+
+// function dispalyData()
+// {
+//     setTimeout(()=>{
+//     console.log("data displayed")},2000);
+// }
+
+// // function waitforTwoSeconds()
+// // {
+// //     waitforTwoSeconds()
+// //     const ms=new Date().getTime()+2000;
+// //     while(new Date().getTime()<ms);
+// // }
+// register();
+// sendEmail();
+// login();
+// getData();
+// dispalyData();
+
+//CallBack Hell
+register(()=>{
+    sendEmail(()=>{
+        login(()=>{
+            getData(()=>{
+                displayData();
+            })   
+    })
+    })
+});
+function register(cb)
 {
     setTimeout(()=>{
-    console.log("login done")},2000);
+        console.log("register end");
+        cb();
+    },2000)
 }
-
-function getData()
+function sendEmail(cb)
 {
     setTimeout(()=>{
-    console.log("data given")},2000);
+        console.log("register end");
+        cb();
+    },3000)
 }
-
-function dispalyData()
+function login(cb)
 {
     setTimeout(()=>{
-    console.log("data displayed")},2000);
+        console.log("register end");
+        cb();
+    },2000)
 }
-
-function waitforTwoSeconds()
+function getData(cb)
 {
-    waitforTwoSeconds()
-    const ms=new Date().getTime()+2000;
-    while(new Date().getTime()<ms);
+    setTimeout(()=>{
+        console.log("register end");
+        cb();
+    },2000)
 }
-register();
-sendEmail();
-login();
-getData();
-dispalyData();
+function displayData()
+{
+    setTimeout(()=>{
+        console.log("register end");
+    },2000)
+}
